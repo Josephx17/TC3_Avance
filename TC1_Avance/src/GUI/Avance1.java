@@ -19,7 +19,6 @@ public class Avance1 extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JButton btnNewButton;
 	private JTextField txt_Nombre;
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;
@@ -62,14 +61,7 @@ public class Avance1 extends JFrame implements ActionListener {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		{
-			btnNewButton = new JButton("Agregar");
-			btnNewButton.setBounds(25, 89, 89, 23);
-			btnNewButton.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-				}
-			});
 			contentPane.setLayout(null);
-			contentPane.add(btnNewButton);
 		}
 		{
 			txt_Nombre = new JTextField();
@@ -133,19 +125,19 @@ public class Avance1 extends JFrame implements ActionListener {
 		}
 		{
 			lblIngreseCelular = new JLabel("Ingrese celular");
-			lblIngreseCelular.setBounds(429, 64, 89, 14);
+			lblIngreseCelular.setBounds(399, 64, 89, 14);
 			contentPane.add(lblIngreseCelular);
 		}
 		{
 			txt_Celular = new JTextField();
-			txt_Celular.setBounds(524, 61, 86, 20);
+			txt_Celular.setBounds(498, 61, 86, 20);
 			txt_Celular.setColumns(10);
 			contentPane.add(txt_Celular);
 		}
 		{
 			btnNewButton_3 = new JButton("Adicionar");
 			btnNewButton_3.addActionListener(this);
-			btnNewButton_3.setBounds(383, 89, 135, 23);
+			btnNewButton_3.setBounds(10, 89, 99, 23);
 			contentPane.add(btnNewButton_3);
 		}
 		{
@@ -155,7 +147,7 @@ public class Avance1 extends JFrame implements ActionListener {
 		}
 		{
 			txtApellido = new JTextField();
-			txtApellido.setBounds(305, 25, 86, 20);
+			txtApellido.setBounds(334, 25, 86, 20);
 			contentPane.add(txtApellido);
 			txtApellido.setColumns(10);
 		}
@@ -168,9 +160,13 @@ public class Avance1 extends JFrame implements ActionListener {
 	}
 	protected void do_btnNewButton_3_actionPerformed(ActionEvent e) {
 	txtS.setText("");
-	Persona p = new Persona(txt_Nombre.getText(),txtApellido.getText(),txt_DNI.getText(),txt_Celular.getText());;
-	txtS.append("Nombre "+ p.getNombre()+"Apellidos"+p.getApellido()+ "DNI" + p.getDni()+"Celular" + p.getNum_celular()+"\n");
-	
+	Persona p=new Persona(txt_Nombre.getText(),txtApellido.getText(), txt_Edad.getText(), txt_DNI.getText(),txt_Celular.getText());
+	txtS.append("Nombres: " + p.getNombre() + "\n");
+	txtS.append("Apellidos: " + p.getApellido() + "\n");
+	txtS.append("Edad: " + p.getEdad() + "\n");
+	txtS.append("DNI: " + p.getDni() + "\n");
+	txtS.append("Celular: " + p.getDni() + "\n");
+
 	
 	}
 }

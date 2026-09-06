@@ -5,11 +5,13 @@ public class Persona {
 	private String apellido;
 	private String Dni;
 	private String num_celular;
-public Persona(String nombre, String apellido, String dni, String num_celular) {
+	private String edad;
+public Persona(String nombre, String apellido, String dni, String num_celular,String edad) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		Dni = dni;
 		this.num_celular = num_celular;
+		this.edad=edad;
 	}
 public String getNombre() {
 	return nombre;
@@ -34,5 +36,11 @@ public String getNum_celular() {
 }
 public void setNum_celular(String num_celular) {
 	this.num_celular = num_celular;
+}
+public String getEdad() {
+	return edad;
+}
+public void setEdad(String edad) {
+	this.edad = edad;
 }
 }
